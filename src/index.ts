@@ -84,3 +84,76 @@ const printNum = (num1: number, num2: number): void => {
 }
 
 printNum(30, 20);
+
+
+//Union Types
+let numOrStr: number | string;
+numOrStr = 10;
+numOrStr = 'Ten';
+
+let arr: (number | string)[] = [10, 'Ten', false];
+
+//Literal types
+let myLiteral: 'Nabendu' | 'Mousam' | 'Shikha' | 'Hriday' = 'Nabendu';
+myLiteral = 'Parag';
+
+//Enum
+enum Role { ADMIN, READ_ONLY, AUTHOR };
+const myRole = Role.ADMIN;
+const hridayRole: Role = Role.AUTHOR;
+
+//Optionals
+let optionalObj: { name: string; age: number | undefined } = {
+    name: 'Nabendu',
+    age: undefined
+}
+
+let betterObj: { name: string; age?: number} = {
+    name: 'Nabendu'
+}
+
+//Interfaces
+interface Developer {
+    name: string;
+    age: number;
+    isDev: boolean;
+}
+
+const person1: Developer = {
+    name: 'Nabendu',
+    age: 42,
+    isDev: true
+}
+
+const person2: Developer = {
+    name: 'Shikha',
+    age: 42,
+    isDev: false
+}
+
+//Types
+type DeveloperType = {
+    name: string;
+    age: number;
+    isDev: boolean;
+}
+
+const person3: DeveloperType = {
+    name: 'Mousam',
+    age: 42,
+    isDev: true
+}
+
+type PersonName = string;
+const person4: PersonName = 'Nabendu';
+
+type CoderType = {
+    name: string;
+    category: 'frontend' | 'backend' | 'mobile';
+    age: number;
+}[];
+
+const coder1: CoderType = [
+    { name: 'Nabendu', category: 'frontend', age: 42 },
+    { name: 'Robin', category: 'mobile', age: 42 }
+]
