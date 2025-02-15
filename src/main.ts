@@ -15,4 +15,5 @@ console.log(`${person5.name} is ${person5.age} year's old and is a ${person5.isD
 type PersonNewName = string;
 const person6: PersonNewName = 'Nabendu';
 
-console.log(`New Developer is ${person6}`)
+console.log(`New Developer is ${person6}`);
+

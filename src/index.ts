@@ -157,3 +157,37 @@ const coder1: CoderType = [
     { name: 'Nabendu', category: 'frontend', age: 42 },
     { name: 'Robin', category: 'mobile', age: 42 }
 ]
+
+//Classes
+class CreateRoom {
+    private family: string[] = [];
+    readonly dobShikha: string = '1982-12-12';
+    private readonly dobHriday: string = '2013-12-12';
+    constructor(public room: string){}
+
+    addFamilyMember(member: string){
+        this.family.push(member);
+    }
+
+    showFamily(){
+        console.log(this.family);
+    }
+
+    cleanRoom(soap: string){
+        console.log(`Cleaning ${this.room} with ${soap}`)
+    }
+}
+
+const nabendu = new CreateRoom('Nabendu');
+const mousam = new CreateRoom('Mousam');
+const hriday = new CreateRoom('Hriday');
+const shikha = new CreateRoom('Shikha');
+shikha.dobShikha;
+shikha.dobShikha = '1982-11-12';
+hriday.dobHriday;
+nabendu.family;
+nabendu.addFamilyMember('Nabendu');
+mousam.addFamilyMember('Mousam');
+hriday.addFamilyMember('Hriday');
+shikha.addFamilyMember('Shikha');
+mousam.cleanRoom('Lizol');
